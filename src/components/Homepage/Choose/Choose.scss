@@ -1,0 +1,46 @@
+.choose-section {
+  background-color: #f9f9f9;
+
+  h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .features-list {
+    margin-top: 20px;
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+
+      .feature-number {
+        width: 40px;
+        height: 40px;
+        background-color: #d4af37; // Gold color
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 40px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
+        margin: 0;
+      }
+    }
+  }
+
+  img {
+    border-radius: 10px;
+  }
+}
