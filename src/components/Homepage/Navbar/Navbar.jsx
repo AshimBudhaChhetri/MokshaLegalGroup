@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
@@ -7,14 +8,14 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
         {/* Logo */}
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img
             src="logo.png" // Replace with your logo URL or path
             alt="Logo"
             width="50"
             height="50"
           />
-        </a>
+        </Link>
 
         {/* Toggle Button for Mobile */}
         <button
@@ -31,36 +32,36 @@ const Navbar = () => {
 
         {/* Menu Items */}
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#home">
+              <Link className="nav-link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about">
+              <Link className="nav-link" to="/aboutpage">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#services">
+              <Link className="nav-link" to="/services">
                 Services
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#attorney">
+              <Link className="nav-link" to="/attorney">
                 Attorney
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#publications">
+              <Link className="nav-link" to="/publications">
                 Publications
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">
+              <Link className="nav-link" to="/contactpage">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
