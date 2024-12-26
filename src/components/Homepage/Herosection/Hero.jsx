@@ -7,9 +7,15 @@ const Hero = () => {
       <div className="container-fluid p-0">
         <div className="row g-0">
           <div className="col-12">
-            <div className="hero-image">
+            <div className="hero-image"></div>
+          </div>
+          <div className="row">
+            <div className="col-12">
               <div className="hero-text">
                 <h1>Your Legal Counsel</h1>
+                <div className="hero-btn">
+                  <button className="hero-appointment">Get Appointment</button>
+                </div>
               </div>
             </div>
           </div>

@@ -1,11 +1,32 @@
 .hero-section {
   .hero-image {
     position: relative;
-    background-image: url("../../carousel-1.146198dc2c3e5ecfc7fc.jpg"); // Replace with your image path
+    background-image: url("../../../Assets/img/img3.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     width: 100%;
-    height: 60vh; // Adjust height as needed
+    height: 100vh;
+    filter: brightness(90%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // background: #37373fb3;
+
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(44, 44, 44, 0.5) 44%,
+        rgba(36, 36, 36, 0.5) 58%,
+        rgba(63, 63, 63, 0.3) 90%
+      );
+      z-index: 1;
+    }
 
     @media (max-width: 768px) {
       height: 50vh; // Adjust for mobile devices
@@ -14,16 +35,18 @@
     @media (max-width: 576px) {
       height: 40vh; // Adjust for smaller devices
     }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
+  }
+  .hero-text {
+    h1 {
+      position: relative;
+      margin-top: -20%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: white;
+      color: #b49c73;
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 4.5rem;
       font-weight: bold;
+      z-index: 2;
 
       @media (max-width: 768px) {
         font-size: 2rem;
@@ -31,6 +54,30 @@
 
       @media (max-width: 576px) {
         font-size: 1.5rem;
+      }
+    }
+  }
+  .hero-btn {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+
+    .hero-appointment {
+      background-color: #b49c73;
+      border: none;
+      border-radius: 5px;
+      color: #000000;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 2;
+
+      &:hover {
+        background-color: #9c815d;
+        color: #ffffff;
+        transform: scale(1.05);
       }
     }
   }
