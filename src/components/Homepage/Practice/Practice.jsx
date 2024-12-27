@@ -1,15 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Practice.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faLocationDot,
-  faEnvelopeOpenText,
-  faPhone,
-  faEnvelope,
   faUsers,
-  faHandHolding,
   faHandHoldingUsd,
   faLandmark,
   faGavel,
@@ -38,15 +34,50 @@ const Practice = () => {
           {/* Left Side Content */}
           <div className="col-lg-4 col-md-12 mb-4">
             <div className="practice-content">
-              <h6 className="practice-subtitle">Our Practices</h6>
-              <h2 className="practice-title">Our Practice Areas</h2>
-              <p className="practice-text">
-                Our Practice Areas include Civil Law for disputes, Family Law
-                for domestic matters, Business Law for corporate needs, and
-                Criminal Law for strong defense. We offer professional, reliable
-                legal solutions tailored to your needs with care and expertise.
-              </p>
-              <button className="button-service">More Services</button>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.12 }}
+                viewport={{ once: false }}
+              >
+                <h6 className="practice-subtitle">Our Practices</h6>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                viewport={{ once: false }}
+              >
+                <h2 className="practice-title">Our Practice Areas</h2>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
+                viewport={{ once: false }}
+              >
+                <p className="practice-text">
+                  Our Practice Areas include Civil Law for disputes, Family Law
+                  for domestic matters, Business Law for corporate needs, and
+                  Criminal Law for strong defense. We offer professional,
+                  reliable legal solutions tailored to your needs with care and
+                  expertise.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="col-lg-6"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: 0.14,
+                }}
+                viewport={{ once: false }}
+              >
+                <button className="button-service">More Services</button>
+              </motion.div>
             </div>
           </div>
 
